@@ -8,7 +8,6 @@ app_license = "mit"
 
 required_apps = []
 
-Each item in the list will be shown as an app in the apps page
 add_to_apps_screen = [
 	{
 		"name": "hr_customization",
@@ -60,12 +59,8 @@ role_home_page = {
 }
 
 
-
-automatically create page for each record of this doctype
 website_generators = ["Web Page"]
 
-
-add methods and filters to jinja environment
 jinja = {
 	"methods": "hr_customization.utils.jinja_methods",
 	"filters": "hr_customization.utils.jinja_filters"
@@ -82,15 +77,9 @@ before_uninstall = "hr_customization.uninstall.before_uninstall"
 after_uninstall = "hr_customization.uninstall.after_uninstall"
 
 
-To set up dependencies/integrations with other apps
-Name of the app being installed is passed as an argument
-
 before_app_install = "hr_customization.utils.before_app_install"
 after_app_install = "hr_customization.utils.after_app_install"
 
-
-To clean up dependencies/integrations with other apps
-Name of the app being uninstalled is passed as an argument
 
 before_app_uninstall = "hr_customization.utils.before_app_uninstall"
 after_app_uninstall = "hr_customization.utils.after_app_uninstall"
@@ -101,7 +90,6 @@ See frappe.core.notifications.get_notification_config
 notification_config = "hr_customization.notifications.get_notification_config"
 
 
-Permissions evaluated in scripted ways
 
 permission_query_conditions = {
 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
@@ -112,14 +100,10 @@ has_permission = {
 }
 
 
-Override standard doctype classes
-
 override_doctype_class = {
 	"ToDo": "custom_app.overrides.CustomToDo"
 }
 
-
-Hook on document methods and events
 
 doc_events = {
 	"*": {
@@ -158,14 +142,11 @@ override_whitelisted_methods = {
 	"frappe.desk.doctype.event.event.get_events": "hr_customization.event.get_events"
 }
 
-each overriding function accepts a `data` argument;
-generated from the base implementation of the doctype dashboard,
-along with any modifications made in other Frappe apps
+
 override_doctype_dashboards = {
 	"Task": "hr_customization.task.get_dashboard_data"
 }
 
-exempt linked doctypes from being automatically cancelled
 
 auto_cancel_exempted_doctypes = ["Auto Repeat"]
 
