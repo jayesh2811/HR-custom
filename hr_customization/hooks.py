@@ -19,7 +19,6 @@ add_to_apps_screen = [
 ]
 
 
-include js, css files in header of desk.html
 app_include_css = "/assets/hr_customization/css/hr_customization.css"
 app_include_js = "/assets/hr_customization/js/hr_customization.js"
 
