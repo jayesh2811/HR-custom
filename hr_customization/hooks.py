@@ -48,7 +48,6 @@ app_include_icons = "hr_customization/public/icons.svg"
 
 home_page = "login"
 
-website user home page (by Role)
 role_home_page = {
 	"Role": "home_page"
 }
