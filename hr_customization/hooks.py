@@ -46,7 +46,6 @@ app_include_icons = "hr_customization/public/icons.svg"
 
 
 
-application home page (will override Website Settings)
 home_page = "login"
 
 website user home page (by Role)
