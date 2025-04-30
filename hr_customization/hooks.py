@@ -79,8 +79,6 @@ before_app_uninstall = "hr_customization.utils.before_app_uninstall"
 after_app_uninstall = "hr_customization.utils.after_app_uninstall"
 
 
-See frappe.core.notifications.get_notification_config
-
 notification_config = "hr_customization.notifications.get_notification_config"
 
 
